@@ -349,6 +349,45 @@ body {
   flex: none;
 }
 
+/* ---------- Gallery ---------- */
+
+.gallery {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.gallery h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0; }
+
+.gallery-sub { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.95rem; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.shot {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  text-align: center;
+  margin: 0;
+}
+
+.shot img {
+  width: 100%;
+  border-radius: 1.4rem;
+  box-shadow: 0 1rem 2.25rem rgba(17, 24, 39, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.shot:hover img {
+  transform: translateY(-6px);
+  box-shadow: 0 1.75rem 3rem rgba(17, 24, 39, 0.22);
+}
+
+.shot figcaption { font-size: 0.85rem; font-weight: 500; color: #374151; }
+
 /* ---------- Footer ---------- */
 
 .foot {
@@ -530,6 +569,30 @@ body {
       <span class="film"><i style="background:#00695C"></i>Kodak Vision3</span>
       <span class="film"><i style="background:#3949AB"></i>Kodak Ektachrome 50</span>
       <span class="film"><i style="background:#8E24AA"></i>Lomography 800</span>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>View the app</h2>
+    <p class="gallery-sub">Every film stock comes with its story and sample shots. Here's what FilmCam looks like inside.</p>
+
+    <div class="gallery-grid">
+      <figure class="shot">
+        <img src="assets/agfa-vista-800.webp" alt="Agfa Vista 800 film detail screen" width="1080" height="2330" style="height:auto" loading="lazy">
+        <figcaption>Agfa Vista 800</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/agfa-ultra-50.webp" alt="Agfa Ultra 50 film detail screen" width="1080" height="2330" style="height:auto" loading="lazy">
+        <figcaption>Agfa Ultra 50</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/fuji-reala-500d.webp" alt="Fuji Reala 500D film detail screen" width="1080" height="2330" style="height:auto" loading="lazy">
+        <figcaption>Fuji Reala 500D</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/ilford-hp5.webp" alt="Ilford HP5 film detail screen" width="1080" height="2330" style="height:auto" loading="lazy">
+        <figcaption>Ilford HP5</figcaption>
+      </figure>
     </div>
   </section>
 
